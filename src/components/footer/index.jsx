@@ -5,7 +5,7 @@ import { Image } from "@nextui-org/image"
 
 const Footer = () => {
     return (
-        <div className="footer-ctr shadow-after-bg relative py-14 px-10 text-white">
+        <div className="footer-ctr shadow-after-bg relative py-14 px-4 lg:px-10 text-white z-[9]">
             <footer className="text-white z-10 relative">
                 <div className="max-w-6xl mx-auto px-4  ">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

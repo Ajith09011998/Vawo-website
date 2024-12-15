@@ -19,7 +19,7 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <nav className="bg-transparent">
+        <nav className="bg-black">
             <div className="max-w-6xl mx-auto px-4">
                 <div className="flex justify-between">
                     <div className="flex space-x-7">
@@ -27,7 +27,7 @@ const Header = () => {
                             <Image src={Logo} alt="logo" className="h-24" />
                         </div>
                     </div>
-                    <div className="hidden md:flex items-center space-x-1">
+                    <div className="hidden lg:flex items-center space-x-1">
                         {menuItems.map((item) => (
                             <motion.div
                                 key={item.name}
@@ -54,7 +54,7 @@ const Header = () => {
                             </motion.div>
                         ))}
                     </div>
-                    <div className="md:hidden flex items-center">
+                    <div className="lg:hidden flex items-center">
                         <button className="outline-none mobile-menu-button text-white" onClick={() => setIsOpen(!isOpen)}>
                             {isOpen ? <X size={24} /> : <Menu size={24} />}
                         </button>
@@ -62,7 +62,7 @@ const Header = () => {
                 </div>
             </div>
             <motion.div
-                className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}
+                className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}
                 initial="closed"
                 animate={isOpen ? "open" : "closed"}
                 variants={{
@@ -76,7 +76,8 @@ const Header = () => {
                         <a
                             key={item.name}
                             href={item.href}
-                            className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-red-500 hover:bg-gray-50 transition duration-300"
+                            className="block px-3 py-2 rounded-md text-sm lg:text-base font-medium
+                             text-white hover:text-red-500 hover:bg-gray-50 transition duration-300"
                         >
                             {item.name}
                         </a>

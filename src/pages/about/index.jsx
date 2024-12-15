@@ -12,13 +12,13 @@ const About = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className='text-white text-center flex flex-col gap-5'>
-                    <h1 className='text-6xl font-bold italic'>
+                    <h1 className='text-4xl md:text-6xl font-bold italic'>
                         About Us
                     </h1>
                 </motion.div>
             </div>
             {/* about */}
-            <div className='max-w-6xl mx-auto px-4 py-10 grid grid-cols-2 gap-5 items-center'>
+            <div className='max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-5 items-center z-[9] relative'>
                 <motion.div initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }} className='flex flex-col gap-5 text-black'>

@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion'
 function AboutComponent() {
     return (
-        <div className='h-screen home-about flex items-center'>
-            <div className='max-w-6xl mx-auto px-4 flex'>
+        <div className='h-auto lg:h-screen home-about flex items-center p-3'>
+            <div className='max-w-6xl mx-auto px-4 flex lg:flex-row flex-col'>
                 <div className='w-[50%]'>
                 </div>
                 <motion.div initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }} className='w-[50%] flex flex-col gap-5 text-white'>
+                    transition={{ duration: 0.8, ease: "easeOut" }} className='w-full lg:w-[50%] flex flex-col gap-5 text-white'>
                     <p className='text-2xl uppercase font-medium'>About <span className='text-red-500'>Fight</span> school</p>
                     <div>
                         <hr className='header-line' />

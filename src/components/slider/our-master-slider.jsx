@@ -53,7 +53,7 @@ function OurMasterSlider() {
     ]
 
     return (
-        <div className="home-our-classes shadow-after-bg relative py-20 px-10">
+        <div className="home-our-classes shadow-after-bg relative py-20 px-10 z-[9]">
             <div className="max-w-6xl mx-auto px-4">
                 <div className='z-10 relative text-white text-center mb-10'>
                     <p className='text-2xl uppercase font-medium'>Our <span className='text-red-500'>Instructors</span></p>

@@ -9,7 +9,25 @@ const settings = {
     slidesToShow: 2,
     slidesToScroll: 2,
     nextArrow: <ChevronRight color='gray' />,
-    prevArrow: <ChevronLeft color='gray' />
+    prevArrow: <ChevronLeft color='gray' />,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+            }
+        },
+        {
+            breakpoint: 700,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+            }
+        }
+    ]
 };
 
 function TestimonialSLider() {
@@ -36,7 +54,7 @@ function TestimonialSLider() {
     ]
 
     return (
-        <div className="bg-[#13182a] relative py-20 px-10">
+        <div className="bg-[#13182a] relative py-20 px-10 z-[9]">
             <div className="max-w-6xl mx-auto px-4">
                 <div className='z-10 relative text-white text-center mb-10'>
                     <p className='text-2xl uppercase font-medium'>What <span className='text-red-500'>Clients</span> say

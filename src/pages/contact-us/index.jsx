@@ -34,14 +34,14 @@ function ContactUs() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className='text-white text-center flex flex-col gap-5'>
-                    <h1 className='text-6xl font-bold italic'>
+                    <h1 className='text-4xl md:text-6xl font-bold italic'>
                         Contact Us
                     </h1>
                 </motion.div>
             </div>
             {/* contact us form */}
             <div className='bg-[#13182a]'>
-                <div className='max-w-6xl mx-auto px-4 py-10 grid grid-cols-2 gap-10 items-center'>
+                <div className='max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center'>
                     <div className='grid grid-cols-2 gap-5'>
                         <div className='col-span-2 mb-5'>
                             <p className='text-2xl uppercase font-medium text-white'>Contact <span className='text-red-500'> Form</span></p>

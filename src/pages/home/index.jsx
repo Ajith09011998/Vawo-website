@@ -14,14 +14,14 @@ const Home = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className='text-white text-center flex flex-col gap-5'>
-                    <p className='text-xl text-red-600 italic font-bold'>#1 MIXED MARTIAL ARTS SCHOOL IN MIAMI</p>
-                    <h1 className='text-6xl font-bold italic'>
+                    <p className='text-xs lg:text-xl text-red-600 italic font-bold'>#1 MIXED MARTIAL ARTS SCHOOL IN MIAMI</p>
+                    <h1 className='text-xl md:text-6xl font-bold italic'>
                         BE A WORRIOR IN LIFE
                     </h1>
-                    <h3 className='text-2xl font-bold italic'>MIND.BODY & SPIRIT IMPROVED</h3>
+                    <h3 className='rounded-none lg:text-2xl font-bold italic'>MIND.BODY & SPIRIT IMPROVED</h3>
 
                     <div className='banner-content'>
-                        <p className='relative text-xl'>
+                        <p className='relative text-sm lg:text-xl'>
                             KUNG FU SCHOOL IN CHINA
                         </p>
                     </div>

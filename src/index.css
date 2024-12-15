@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .banner{
-  @apply bg-cover bg-no-repeat;
+  @apply bg-cover bg-no-repeat bg-bottom md:bg-left-top;
   background-image:url("https://webdesign-finder.com/youko/wp-content/uploads/2017/06/slide_01.jpg");
 }
 
