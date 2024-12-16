@@ -3,6 +3,9 @@ import { Input } from '@nextui-org/input';
 import { Button } from '@nextui-org/button';
 import axios from 'axios';
 import { useState } from 'react';
+import CertificateImg from '../../assets/123.jpg'
+import { Image } from '@nextui-org/image';
+import { Download } from 'lucide-react';
 
 const Certificate = () => {
     const [certificateValue, setCertificateValue] = useState('');
@@ -20,6 +23,28 @@ const Certificate = () => {
                 console.error('Error:', error.response ? error.response.data : error.message); // Handle error
             });
     }
+
+    const downloadImage = async (imageUrl) => {
+        try {
+            const response = await fetch(imageUrl);
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = "my-dynamic-image.jpg";
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+
+            // Clean up the object URL
+            window.URL.revokeObjectURL(url);
+        } catch (error) {
+            console.error("Error downloading the image:", error);
+        }
+
+    }
+
     return (
         <div>
             {/* about banner */}
@@ -49,6 +74,23 @@ const Certificate = () => {
                     <Button className='bg-gray-400 text-gray-600 rounded-none' size='lg' onClick={() => {
                         searchApiCall()
                     }}>Search</Button>
+                </div>
+
+                <div className='grid grid-cols-2 gap-5 py-10 z-[9] relative'>
+                    <div className='relative'>
+                        <Image src={CertificateImg} />
+                        <Button isIconOnly className='absolute top-3 right-3 bg-white z-[99]' onPress={() => {
+                            downloadImage(CertificateImg)
+                        }}>
+                            <Download />
+                        </Button>
+                    </div>
+                    <div className='relative'>
+                        <Image src={CertificateImg} />
+                        <Button isIconOnly className='absolute top-3 right-3 bg-white z-[99]'>
+                            <Download />
+                        </Button>
+                    </div>
                 </div>
             </div>
         </div>
