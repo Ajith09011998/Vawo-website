@@ -4,6 +4,10 @@ import About from './pages/about';
 import Certificate from './pages/certificate';
 import ContactUs from './pages/contact-us';
 import PlainLayout from './components/Layout/plain-layout';
+import Thaikalam from './pages/thaikalam';
+import Event from './pages/event';
+import OurClasses from './pages/our-classes';
+import Shop from './pages/shop/indes';
 
 const AppRoutes = () => {
   const routes = useRoutes([
@@ -20,6 +24,22 @@ const AppRoutes = () => {
         {
           path: 'certificate',
           element: <Certificate />,
+        },
+        {
+          path: 'shop',
+          element: <Shop />,
+        },
+        {
+          path: 'events',
+          element: <Event />,
+        },
+        {
+          path: 'our-classes',
+          element: <OurClasses />,
+        },
+        {
+          path: 'thaikalam',
+          element: <Thaikalam />,
         },
         {
           path: 'contact-us',

@@ -1,0 +1,1 @@
+export { HomeBanner } from '../assets/image/Home_Banner.jpg';

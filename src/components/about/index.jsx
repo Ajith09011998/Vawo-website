@@ -1,4 +1,6 @@
+/* eslint-disable no-irregular-whitespace */
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 function AboutComponent() {
     return (
         <div className='h-auto lg:h-screen home-about flex items-center p-3'>
@@ -8,24 +10,18 @@ function AboutComponent() {
                 <motion.div initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }} className='w-full lg:w-[50%] flex flex-col gap-5 text-white'>
-                    <p className='text-2xl uppercase font-medium'>About <span className='text-red-500'>Fight</span> school</p>
+                    <p className='text-2xl uppercase font-medium'>About <span className='text-red-500'>Our</span> ORGANIZATION</p>
                     <div>
                         <hr className='header-line' />
                     </div>
                     <p>
-                        Fight School has specialized in martial arts since 1986 and has one of the most innovative programs in the nation.
+                        Lemuria Varmakalari Adimurai World Organization started as a training centre in 2013 intending to teach the martial arts of ancient Tamil people to the present generation.
+                        Later registered as a foundation and created various training sites in villages, schools and colleges.Lemuria Varmakalari Adimurai World Organization is travelling through the Internet as a martial arts training centre and as an artistic group today in about 28 countries in the world (Through online live classes).
                     </p>
                     <p>
-                        We teach martial arts because we love it — not because we want to make money
-                        on you. Unlike other martial arts schools, we do not require you to sign long
-                        term contracts. You just pay one low monthly fee for your martial arts and
-                        self defense classes at the beginning of each month. Many martial arts...
-                        <span className='text-red-500 font-medium'>Read More</span>
+                        By teaching the students this ancient Tamil arts we also provide them accommodation and free education in schools and colleges.
+                        <Link className='text-red-500 font-medium cursor-pointer ml-2' to="/about">Read More</Link>
                     </p>
-                    <div>
-                        <p>Aiden Richards</p>
-                        <p className='text-red-500 font-medium text-xs'>Director / Instructor</p>
-                    </div>
                 </motion.div>
             </div>
         </div>

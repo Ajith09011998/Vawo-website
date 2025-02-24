@@ -1,6 +1,12 @@
 import Slider from "react-slick";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Image } from "@nextui-org/image";
+import Master1 from "../../assets/master/rishanth.jpg";
+import Master2 from "../../assets/master/Ajay.jpg";
+import Master3 from "../../assets/master/Anandhamurugan.jpg";
+import Master4 from "../../assets/master/srikanth.jpg";
+import Master5 from "../../assets/master/Gomathi_sankari.jpg";
+
 
 const settings = {
     dots: false,
@@ -34,29 +40,35 @@ function OurMasterSlider() {
     const our_classes = [
         {
             id: 1,
-            image: "https://webdesign-finder.com/youko/wp-content/uploads/2018/01/team_1.jpg",
-            title: "Traditional Martial Arts",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+            image: Master1,
+            title: "Reshanth",
         },
         {
             id: 2,
-            image: "https://webdesign-finder.com/youko/wp-content/uploads/2018/01/team_2.jpg",
-            title: "Traditional Martial Arts",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+            image: Master2,
+            title: "Ajay",
         },
         {
             id: 3,
-            image: "https://webdesign-finder.com/youko/wp-content/uploads/2018/01/team_3.jpg",
-            title: "Traditional Martial Arts",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+            image: Master3,
+            title: "Anandhamurugan",
         },
+        {
+            id: 4,
+            image: Master4,
+            title: "Srikanth",
+        }, {
+            id: 5,
+            image: Master5,
+            title: "Gomathi Sankari",
+        }
     ]
 
     return (
         <div className="home-our-classes shadow-after-bg relative py-20 px-10 z-[9]">
             <div className="max-w-6xl mx-auto px-4">
                 <div className='z-10 relative text-white text-center mb-10'>
-                    <p className='text-2xl uppercase font-medium'>Our <span className='text-red-500'>Instructors</span></p>
+                    <p className='text-2xl uppercase font-medium'>Our <span className='text-red-500'>Masters</span></p>
                     <div className='flex justify-center my-2'>
                         <hr className='header-line' />
                     </div>
@@ -68,11 +80,12 @@ function OurMasterSlider() {
                                 alt="NextUI hero Image"
                                 src={item?.image}
                                 width={300}
-                                className='rounded-none'
+                                height={300}
+                                className='rounded-none object-contain'
                             />
                             <div className='bg-black p-7 text-center'>
-                                <p>Traditional Martial Arts</p>
-                                <p className='text-red-500 text-xs'>5:00-6:00 am / Alejandro Diaz </p>
+                                <p>{item?.title}</p>
+                                <p className='text-red-500 text-xs'>9:00 am -6:00 pm / Master </p>
                             </div>
                         </div>
                     ))}
