@@ -1,11 +1,14 @@
 import { Button } from '@nextui-org/button'
+import Shop1 from '../../assets/shop/shop-1.jpg';
+import Shop2 from '../../assets/shop/shop-2.jpg';
+import Shop3 from '../../assets/shop/shop-3.jpg';
 
 function ShopNow() {
 
     const products = [
-        { id: 1, name: "Elegant Watch", price: 199.99, image: "https://kzmk0uu2bm958l3dtf16.lite.vusercontent.net/placeholder.svg?height=200&width=200" },
-        { id: 2, name: "Leather Wallet", price: 49.99, image: "https://kzmk0uu2bm958l3dtf16.lite.vusercontent.net/placeholder.svg?height=200&width=200" },
-        { id: 3, name: "Sunglasses", price: 79.99, image: "https://kzmk0uu2bm958l3dtf16.lite.vusercontent.net/placeholder.svg?height=200&width=200" },
+        { id: 1, name: "MADI kATHI", price: 400, image: Shop1 },
+        { id: 2, name: "DASA PARAI", price: 6000, image: Shop2 },
+        { id: 3, name: "PAYIRCHI VAAL", price: 850, image: Shop3 },
     ]
 
     return (
@@ -18,15 +21,15 @@ function ShopNow() {
                             <img
                                 src={product.image || "/placeholder.svg"}
                                 alt={product.name}
-                                className="w-full h-48 object-cover rounded-md"
+                                className="w-full h-[530px] object-cover rounded-md"
                             />
                         </div>
                         <div className="flex justify-between items-center">
                             <div>
                                 <p className="text-lg font-bold">{product.name}</p>
-                                <p className="text-md font-semibold">${product.price.toFixed(2)}</p>
+                                <p className="text-md font-semibold">Rs.{product.price.toFixed(2)}</p>
                             </div>
-                            <Button>Shop Now</Button>
+                            <Button className='font-semibold'>Shop Now</Button>
                         </div>
                     </div>
                 ))}

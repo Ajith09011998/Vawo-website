@@ -3,10 +3,14 @@ import { Accordion, AccordionItem } from "@heroui/accordion";
 
 function OurClasses() {
 
+    // Get the query string from the URL
+    const queryString = window.location.search.slice(1); // "?dasfsfaf"
+
     const our_classes = [
         {
             id: 1,
             title: "ADIMURAI",
+            slug: "adimurai",
             content: <div>
                 <p>Adimurai – Ancient Tamil Martial Art of Self-Defense and Varma Kalai</p>
                 <p>Adimurai, one of the oldest martial arts of Tamil Nadu, is renowned for its focus on self-defense, striking techniques, and vital point attacks (Varma Kalai). Rooted in Tamil culture, this traditional art emphasizes agility, precision, and combat skills, making it a cornerstone of Tamil martial arts heritage.</p>
@@ -16,6 +20,7 @@ function OurClasses() {
         {
             id: 2,
             title: "SILAMBAM",
+            slug: "silambam",
             content: <div>
                 <p>Silambam – Traditional Tamil Martial Art of Weapon Combat</p>
                 <p>Silambam, an ancient Tamil martial art, is celebrated for its mastery of stick fighting, self-defense techniques, and agility training. Originating in Tamil Nadu, this traditional art uses a variety of weapons like the silambam stick, spears, and swords, emphasizing precision, speed, and discipline.</p>
@@ -24,6 +29,7 @@ function OurClasses() {
         }, {
             id: 3,
             title: "MALLAR KAMBAM",
+            slug: "mallar_kambam",
             content: <div>
                 <p>Mallar Kambam – Ancient Tamil Martial Art of Pole Gymnastics</p>
                 <p>Mallar Kambam, a traditional Tamil martial art, focuses on pole gymnastics and acrobatics, combining strength, flexibility, and agility. Practiced on a vertical wooden pole, this art form enhances core strength, coordination, and balance. Originating in Tamil Nadu, Mallar Kambam is deeply rooted in the region’s cultural and martial heritage.</p>
@@ -33,6 +39,7 @@ function OurClasses() {
         {
             id: 4,
             title: "MALLAR KAYIRU",
+            slug: "mallar_kayiru",
             content: <div>
                 <p>Mallar Kayiru – Traditional Rope-Based Martial Art of Tamil Nadu</p>
                 <p>Mallar Kayiru, an ancient Tamil martial art, focuses on the use of ropes for combat, self-defense, and acrobatic techniques. This unique art form showcases agility, precision, and strength, emphasizing intricate rope maneuvers to immobilize or disarm opponents. Rooted in Tamil Nadu’s rich martial tradition, Mallar Kayiru is both a physical and cultural practice.</p>
@@ -42,6 +49,7 @@ function OurClasses() {
         {
             id: 5,
             title: "PARAI ISAI",
+            slug: "parai_isai",
             content: <div>
                 <p>Parai Isai – Traditional Tamil Percussion Art</p>
                 <p>Parai Isai, one of the oldest percussion arts of Tamil Nadu, is a vibrant and powerful form of drumming that holds deep cultural and historical significance. Played using the parai drum, this art form is known for its rhythmic beats that resonate during festivals, rituals, and social gatherings, symbolizing Tamil identity and unity.
@@ -51,6 +59,7 @@ function OurClasses() {
         {
             id: 6,
             title: "OYIL DANCE",
+            slug: "oyil_dance",
             content: <div>
                 <p>Oyil Dance – Traditional Folk Dance of Tamil Nadu</p>
                 <p>Oyil Dance, a vibrant folk dance of Tamil Nadu, is celebrated for its energetic movements, colorful costumes, and rhythmic music. This traditional art form is performed during festivals, temple celebrations, and cultural gatherings, showcasing the rich heritage and lively spirit of Tamil culture.</p>
@@ -59,6 +68,7 @@ function OurClasses() {
         }, {
             id: 7,
             title: "GYMNASTICS",
+            slug: "gymnastics",
             content: <div>
                 <p>Tamil Gymnastics – Ancient Fitness and Performance Art of Tamil Nadu</p>
                 <p>Tamil Gymnastics is a traditional art form that combines strength, agility, and acrobatics, rooted in the martial and cultural heritage of Tamil Nadu. Known for its emphasis on flexibility, balance, and core strength, it includes techniques performed on the ground, poles, or ropes, reflecting the ingenuity of Tamil fitness practices.</p>
@@ -68,6 +78,7 @@ function OurClasses() {
         {
             id: 8,
             title: "VARMAKALAI",
+            slug: "varmakalai",
             content: <div>
                 <p>Varmakalari – Ancient Tamil Martial Art of Vital Point Combat</p>
                 <p>Varmakalari, a traditional Tamil martial art, focuses on the mastery of vital point techniques (Varma Kalai) for self-defense and healing. Combining combat skills, pressure point knowledge, and spiritual discipline, Varmakalari is a profound practice rooted in Tamil Nadu’s ancient martial traditions.</p>
@@ -77,6 +88,7 @@ function OurClasses() {
         {
             id: 9,
             title: "LESIM",
+            slug: "lesim",
             content: <div>
                 <p>Lesim – Traditional Tamil Art of Rhythmic Fitness and Dance</p>
                 <p>Lesim, a traditional Tamil art form, blends rhythmic movements, vibrant music, and fitness techniques. It is performed with a handheld instrument called the lesim, producing jingling sounds that synchronize with dynamic steps and arm movements.</p>
@@ -86,6 +98,7 @@ function OurClasses() {
         {
             id: 10,
             title: "TRADITIONAL DANCE",
+            slug: "traditional_dance",
             content: <div>
                 <p>Traditional Dances of Tamil Nadu – A Celebration of Culture and Heritage</p>
                 <p>The traditional dances of Tamil Nadu are a vibrant expression of the state’s rich cultural heritage. From the graceful Bharatanatyam to the energetic Oyil Kummi, these dance forms reflect Tamil Nadu’s spiritual, social, and historical essence. Performed during festivals, temple rituals, and cultural events, they combine intricate movements, rhythmic music, and colorful costumes.</p>
@@ -94,6 +107,7 @@ function OurClasses() {
         }, {
             id: 11,
             title: 'PUPPET SHOW',
+            slug: "puppet_show",
             content: <div>
                 <p>Puppet Show – Traditional Tamil Art of Storytelling</p>
                 <p>The Puppet Show (Bommalattam) is a cherished traditional art form of Tamil Nadu, combining storytelling, music, and intricate puppetry to narrate mythological tales and folklore. Using beautifully crafted puppets made of wood or cloth, this art captivates audiences with its vibrant visuals and engaging performances.
@@ -102,6 +116,7 @@ function OurClasses() {
         }, {
             id: 12,
             title: 'ADIMURAI YOGA ',
+            slug: "adimurai_yoga",
             content: <div>
                 <p>Adimurai Yoga – The Fusion of Tamil Martial Art and Ancient Yoga</p>
                 <p>Adimurai Yoga is a unique practice rooted in Tamil Nadu’s ancient martial art traditions, combining Adimurai’s self-defense techniques with the meditative and physical aspects of yoga. This discipline focuses on flexibility, strength, breath control, and mental focus, offering a holistic approach to fitness and well-being.</p>
@@ -111,6 +126,7 @@ function OurClasses() {
         {
             id: 13,
             title: 'VARMA',
+            slug: "varma",
             content: <div>
                 <p>Varma – Ancient Tamil Art of Vital Point Science</p>
                 <p>Varma, an ancient Tamil art form, is a unique blend of martial techniques, healing practices, and vital point science (Varma Kalai). Rooted in Tamil Nadu’s rich heritage, Varma focuses on understanding and utilizing the body’s energy points for self-defense and therapeutic purposes.</p>
@@ -120,6 +136,7 @@ function OurClasses() {
         {
             id: 14,
             title: 'MALLU SANDAI',
+            slug: "mallu_sandai",
             content: <div>
                 <p>Mallu Sandai – Traditional Tamil Grappling Martial Art</p>
                 <p>Mallu Sandai, a traditional martial art of Tamil Nadu, focuses on grappling, close combat techniques, and physical strength. Known for its tactical moves and skillful locks, Mallu Sandai emphasizes agility, endurance, and strategy. This ancient art is deeply rooted in Tamil culture and has been practiced for centuries as a means of self-defense and fitness.</p>
@@ -129,6 +146,7 @@ function OurClasses() {
         {
             id: 15,
             title: 'SIDDDHA MEDICINE',
+            slug: "siddha_medicine",
             content: <div>
                 <p>Siddha Medicine – The Ancient Healing System of Tamil Martial Arts</p>
                 <p>Siddha Medicine is a traditional Tamil healing system deeply connected to the regions martial arts and holistic practices. Rooted in ancient texts, Siddha focuses on balancing the body, mind, and spirit through herbal remedies, dietary guidance, and physical therapies. It also incorporates the knowledge of Varma Kalai (vital points) for therapeutic and martial applications.</p>
@@ -137,6 +155,7 @@ function OurClasses() {
         }, {
             id: 16,
             title: 'STREET PLAYS ',
+            slug: "street_plays",
             content: <div>
                 <p>Street Plays – Vibrant Tamil Art of Storytelling and Social Awareness</p>
                 <p>Street plays (Theru Koothu) are a dynamic traditional art form of Tamil Nadu, combining acting, music, and dance to narrate stories and address social issues. Performed in open spaces like streets and village squares, these plays captivate audiences with their engaging dialogues, colorful costumes, and powerful messages.</p>
@@ -145,6 +164,7 @@ function OurClasses() {
         }, {
             id: 17,
             title: 'KARAKATTAM',
+            slug: "karakaatam",
             content: <div>
                 <p>Karakattam – Traditional Tamil Folk Dance of Grace and Balance</p>
                 <p>Karakattam, a vibrant folk dance of Tamil Nadu, is a celebration of grace, rhythm, and balance, performed while balancing a pot (karakam) on the dancers head. Traditionally offered as a tribute to rain deities like Mariamman, this art form is characterized by energetic movements, colorful costumes, and live folk music.</p>
@@ -153,6 +173,7 @@ function OurClasses() {
         }, {
             id: 18,
             title: 'MAAN KOMBU DANCE',
+            slug: "maankombu_dance",
             content: <div>
                 <p>Maan Kondu Dance – Traditional Tamil Folk Dance Inspired by Deer Movements</p>
                 <p>Maan Kondu Dance, a unique folk dance from Tamil Nadu, mimics the graceful movements of deer (Maan). This traditional art form is characterized by elegant steps, rhythmic patterns, and vibrant costumes, reflecting the close connection between Tamil culture and nature.</p>
@@ -161,6 +182,7 @@ function OurClasses() {
         }, {
             id: 19,
             title: 'KUMMI DANCE',
+            slug: "kummi_dance",
             content: <div>
                 <p>Kummi Dance – Traditional Tamil Folk Dance of Rhythm and Unity</p>
                 <p>Kummi Dance is one of Tamil Nadu’s oldest folk dances, performed by women in circular formations, clapping hands rhythmically to vibrant songs. This traditional dance is a symbol of unity, celebration, and community spirit, often showcased during festivals, harvest celebrations, and cultural gatherings.</p>
@@ -168,6 +190,14 @@ function OurClasses() {
             </div>
         }
     ]
+
+    const labelToKeyMap = our_classes.reduce((acc, item) => {
+        acc[item.slug] = item.id.toString(); // Convert id to string if needed
+        return acc;
+    }, {});
+
+    const defaultExpandedKey = labelToKeyMap[queryString] || "1";
+
 
     return (
         <div>
@@ -182,7 +212,7 @@ function OurClasses() {
                 </motion.div>
             </div>
             <div className='max-w-6xl mx-auto px-4 py-5 gap-5 items-center z-[9] relative'>
-                <Accordion variant="splitted" className='rounded-none' defaultExpandedKeys={["1"]}>
+                <Accordion variant="splitted" className='rounded-none' defaultExpandedKeys={[defaultExpandedKey]}>
                     {our_classes?.map(data => (
                         <AccordionItem key={data.id} aria-label={data.title} title={data.title}
                             classNames={{
@@ -192,18 +222,7 @@ function OurClasses() {
                             }}>
                             {data.content}
                         </AccordionItem>
-                    ))
-
-                    }
-                    {/* <AccordionItem key="1" aria-label="Accordion 1" title="Accordion 1">
-                        {defaultContent}
-                    </AccordionItem>
-                    <AccordionItem key="2" aria-label="Accordion 2" title="Accordion 2">
-                        {defaultContent}
-                    </AccordionItem>
-                    <AccordionItem key="3" aria-label="Accordion 3" title="Accordion 3">
-                        {defaultContent}
-                    </AccordionItem> */}
+                    ))}
                 </Accordion>
             </div>
         </div>

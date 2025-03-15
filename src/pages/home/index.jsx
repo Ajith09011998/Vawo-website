@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import ButtonComponent from '../../components/ui/button';
 import OurClassesSlider from '../../components/slider/our-classes-slider';
-import TestimonialSLider from '../../components/slider/testimonial-slider';
+// import TestimonialSLider from '../../components/slider/testimonial-slider';
 import AboutComponent from '../../components/about';
 import ShopNow from './shonow';
 
@@ -62,7 +62,7 @@ const Home = () => {
             {/* Home Our classes */}
             <OurClassesSlider />
             {/* our client says */}
-            <TestimonialSLider />
+            {/* <TestimonialSLider /> */}
             {/* Our master slider */}
             {/* shop now */}
             <div className='pt-20'>

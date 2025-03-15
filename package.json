@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@heroui/accordion": "^2.2.8",
+    "@heroui/popover": "^2.3.16",
     "@heroui/scroll-shadow": "^2.3.5",
     "@heroui/system": "^2.4.6",
     "@heroui/theme": "^2.4.5",

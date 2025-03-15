@@ -12,30 +12,30 @@ import Founder3 from '../../assets/master/Shanmugamurthy.jpg';
 import { Link } from 'react-router-dom';
 import GoogleMapWithAreas from '../../components/map/GoogleMapWithAreas';
 import OurMasterSlider from '../../components/slider/our-master-slider';
+import { Popover, PopoverTrigger, PopoverContent } from "@heroui/popover";
 
 const About = () => {
 
     const ourclassData = [
-        { "id": 1, "name": "Adimurai" },
-        { "id": 2, "name": "Silambam" },
-        { "id": 3, "name": "Mallar kambam" },
-        { "id": 4, "name": "Mallar kaiyru" },
-        { "id": 5, "name": "Parai isai" },
-        { "id": 6, "name": "Oyil dance" },
-        { "id": 7, "name": "Gymnastics" },
-        { "id": 8, "name": "Varmakalari" },
-        { "id": 9, "name": "Lesim" },
-        { "id": 10, "name": "Traditional dances" },
-        { "id": 11, "name": "Puppet Show" },
-        { "id": 12, "name": "Adimurai yoga" },
-        { "id": 13, "name": "Varma" },
-        { "id": 14, "name": "Mallusandai" },
-        { "id": 15, "name": "Siddha Medicine" },
-        { "id": 16, "name": "Street plays" },
-        { "id": 17, "name": "Karakaatam" },
-        { "id": 18, "name": "Saatai kuchidance (Pairs)" },
-        { "id": 19, "name": "Maankombu dance" },
-        { "id": 20, "name": "Kummi dance" }
+        { "id": 1, "name": "Adimurai", desc: "Ancient Tamil Martial Art of Self-Defense and Varma Kalai", slug: "adimurai" },
+        { "id": 2, "name": "Silambam", desc: "Traditional Tamil Martial Art of Weapon Combat", slug: "silambam" },
+        { "id": 3, "name": "Mallar kambam", slug: "mallar_kambam", desc: "Ancient Tamil Martial Art of Pole Gymnastics" },
+        { "id": 4, "name": "Mallar kaiyru", slug: "mallar_kayiru", desc: "Traditional Rope-Based Martial Art of Tamil Nadu" },
+        { "id": 5, "name": "Parai isai", slug: "parai_isai", desc: "Traditional Tamil Percussion Art" },
+        { "id": 6, "name": "Oyil dance", slug: "oyil_dance", desc: "Traditional Folk Dance of Tamil Nadu" },
+        { "id": 7, "name": "Gymnastics", slug: "gymnastics", desc: "Ancient Fitness and Performance Art of Tamil Nadu" },
+        { "id": 8, "name": "Varmakalari", slug: "varmakalai", desc: "Ancient Tamil Martial Art of Vital Point Combat" },
+        { "id": 9, "name": "Lesim", slug: "lesim", desc: "Traditional Tamil Art of Rhythmic Fitness and Dance" },
+        { "id": 10, "name": "Traditional dances", slug: "traditional_dance", desc: "A Celebration of Culture and Heritage" },
+        { "id": 11, "name": "Puppet Show", slug: "puppet_show", desc: "Traditional Tamil Art of Storytelling" },
+        { "id": 12, "name": "Adimurai yoga", slug: "adimurai_yoga", desc: "The Fusion of Tamil Martial Art and Ancient Yoga" },
+        { "id": 13, "name": "Varma", slug: "varma", desc: "Ancient Tamil Art of Vital Point Science" },
+        { "id": 14, "name": "Mallusandai", slug: "mallu_sandai", desc: "Traditional Tamil Grappling Martial Art" },
+        { "id": 15, "name": "Siddha Medicine", slug: "siddha_medicine", desc: "The Ancient Healing System of Tamil Martial Arts" },
+        { "id": 16, "name": "Street plays", slug: "street_plays", desc: "Vibrant Tamil Art of Storytelling and Social Awareness" },
+        { "id": 17, "name": "Karakaatam", slug: "karakaatam", desc: "Traditional Tamil Folk Dance of Grace and Balance" },
+        { "id": 19, "name": "Maankombu dance", slug: "maankombu_dance", desc: "Traditional Tamil Folk Dance Inspired by Deer Movements" },
+        { "id": 20, "name": "Kummi dance", slug: "kummi_dance", desc: "Traditional Tamil Folk Dance of Rhythm and Unity" },
     ]
 
     return (
@@ -107,21 +107,31 @@ const About = () => {
                 <div className='flex items-center justify-center'>
                     <hr className='header-line' />
                 </div>
-                <div className='grid grid-cols-2 md:grid-cols-5 gap-5 my-10'>
+                <div className='grid grid-cols-2 md:grid-cols-5 gap-5 my-10 relative z-[9]'>
                     {ourclassData?.map((data) =>
-                        <Link className="relative group bg-gray-200 shadow-2xl p-5 text-center text-lg font-bold flex items-center justify-center overflow-hidden" key={data?.id}
-                            to={"/our-classes"}>
-                            <div className="absolute inset-0 bg-gradient-to-r from-black to-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-center z-0"></div>
-                            <div className="relative z-10 text-gray-800 group-hover:text-white">
-                                {data?.name}
-                            </div>
-                        </Link>
+                        <Popover placement="bottom" showArrow={true} key={data?.id}>
+                            <PopoverTrigger>
+                                <div className="relative group bg-gray-200 shadow-2xl p-5 text-center text-lg font-bold flex items-center
+                         justify-center overflow-hidden cursor-pointer">
+                                    <div className="absolute inset-0 bg-gradient-to-r from-black to-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-center z-0"></div>
+                                    <div className="relative z-10 text-gray-800 group-hover:text-white">
+                                        {data?.name}
+                                    </div>
+                                </div>
+                            </PopoverTrigger>
+                            <PopoverContent className='w-60'>
+                                <div className="px-1 py-2">
+                                    <div className="text-small font-bold">{data?.name}</div>
+                                    <div className="text-tiny">{data?.desc}</div>
+                                    <Link className='text-xs font-bold' to={`/our-classes?${data?.slug}`}>Read More</Link>
+                                </div>
+                            </PopoverContent>
+                        </Popover>
                     )}
                 </div>
             </div>
 
             <OurMasterSlider />
-
 
             {/* varmakali  */}
 
@@ -176,6 +186,7 @@ const About = () => {
             </div>
 
             <div className='max-w-6xl mx-auto px-4 py-10 z-[9] relative'>
+                <p className='text-2xl font-bold mb-10 text-center'>Our Organization</p>
                 <GoogleMapWithAreas />
             </div>
 

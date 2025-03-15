@@ -1,6 +1,10 @@
 import Slider from "react-slick";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Image } from "@nextui-org/image";
+import AdimuraiImage from "../../assets/our-class/adimurai.jpg";
+import MallarKambamImage from "../../assets/our-class/mallar-kairu.jpg";
+import MallarKairuImage from "../../assets/our-class/mallar-kambam.jpg";
+import { useNavigate } from "react-router-dom";
 
 const settings = {
     dots: false,
@@ -30,25 +34,29 @@ const settings = {
     ]
 };
 function OurClassesSlider() {
+    const navigate = useNavigate();
 
     const our_classes = [
         {
             id: 1,
-            image: "https://webdesign-finder.com/youko/wp-content/uploads/2018/02/img_25-600x390.jpg",
-            title: "Traditional Martial Arts",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+            image: AdimuraiImage,
+            title: "ADIMURAI",
+            slug: "adimurai",
+            description: "Ancient Tamil Martial Art of Self-Defense and Varma Kalai Adimurai, one of the oldest martial arts of Tamil Nadu, is renowned for its focus on self- defense, striking techniques, and vital point attacks(Varma Kalai) ",
         },
         {
             id: 2,
-            image: "https://webdesign-finder.com/youko/wp-content/uploads/2018/02/img_25-600x390.jpg",
-            title: "Traditional Martial Arts",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+            image: MallarKambamImage,
+            title: "MALLAR KAYIRU",
+            slug: "mallar_kayiru",
+            description: "Mallar Kayiru, an ancient Tamil martial art, focuses on the use of ropes for combat, self-defense, and acrobatic techniques. This unique art form showcases agility, precision, and strength.",
         },
         {
             id: 3,
-            image: "https://webdesign-finder.com/youko/wp-content/uploads/2018/02/img_25-600x390.jpg",
-            title: "Traditional Martial Arts",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+            image: MallarKairuImage,
+            title: "MALLAR KAMBAM",
+            slug: "mallar_kambam",
+            description: "Mallar Kambam, a traditional Tamil martial art, focuses on pole gymnastics and acrobatics, combining strength, flexibility, and agility. Practiced on a vertical wooden pole.",
         },
     ]
 
@@ -63,20 +71,20 @@ function OurClassesSlider() {
                 </div>
                 <Slider {...settings} className='z-10 ourclasses-slick text-white'>
                     {our_classes?.map((item) => (
-                        <div className='!w-auto lg:!w-[300px]' key={item.id}>
+                        <div className='!w-auto lg:!w-[300px] !flex flex-col items-center cursor-pointer' key={item.id} onClick={() => navigate(`/our-classes?${item.slug}`)}>
                             <Image
                                 alt="NextUI hero Image"
-                                src="https://webdesign-finder.com/youko/wp-content/uploads/2018/02/img_25-600x390.jpg"
+                                src={item.image}
                                 width={300}
+                                height={300}
                                 classNames={{
                                     img: 'rounded-none w-full',
                                     wrapper: '!max-w-max'
                                 }}
                             />
-                            <div className='bg-black p-7 text-center'>
-                                <p>Traditional Martial Arts</p>
-                                <p className='text-red-500 text-xs'>5:00-6:00 am / Alejandro Diaz </p>
-                                <p className='pt-3 text-gray-400 font-normal'>Filet mignon bresaola doner, buffalo pork belly meatball meatl swine sirloin.</p>
+                            <div className="pt-5">
+                                <p>{item.title}</p>
+                                <p className='pt-3 text-gray-400 font-normal text-left'>{item.description}</p>
                             </div>
                         </div>
                     ))}

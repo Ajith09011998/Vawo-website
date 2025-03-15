@@ -85,7 +85,7 @@ function OurMasterSlider() {
                             />
                             <div className='bg-black p-7 text-center'>
                                 <p>{item?.title}</p>
-                                <p className='text-red-500 text-xs'>9:00 am -6:00 pm / Master </p>
+                                <p className='text-red-500 text-sm font-bold'>Master </p>
                             </div>
                         </div>
                     ))}

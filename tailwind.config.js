@@ -6,7 +6,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@nextui-org/theme/dist/components/(button|dropdown|image|input|link|navbar|ripple|spinner|menu|divider|popover|form).js",
-    "./node_modules/@heroui/theme/dist/components/(accordion|scroll-shadow|divider).js"
+    "./node_modules/@heroui/theme/dist/components/(accordion|popover|scroll-shadow|divider|button|ripple|spinner).js"
   ],
   theme: {
     extend: {

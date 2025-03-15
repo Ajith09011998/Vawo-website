@@ -7,7 +7,7 @@ import PlainLayout from './components/Layout/plain-layout';
 import Thaikalam from './pages/thaikalam';
 import Event from './pages/event';
 import OurClasses from './pages/our-classes';
-import Shop from './pages/shop/indes';
+import Shop from './pages/shop';
 
 const AppRoutes = () => {
   const routes = useRoutes([
