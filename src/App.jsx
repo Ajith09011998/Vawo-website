@@ -8,6 +8,9 @@ import Thaikalam from './pages/thaikalam';
 import Event from './pages/event';
 import OurClasses from './pages/our-classes';
 import Shop from './pages/shop';
+import Terms from './pages/terms';
+import Return from './pages/return';
+import Privacy from './pages/privacy';
 
 const AppRoutes = () => {
   const routes = useRoutes([
@@ -44,6 +47,18 @@ const AppRoutes = () => {
         {
           path: 'contact-us',
           element: <ContactUs />,
+        },
+        {
+          path: 'terms',
+          element: <Terms />,
+        },
+        {
+          path: 'return',
+          element: <Return />,
+        },
+        {
+          path: 'privacy',
+          element: <Privacy />,
         },
       ],
     },

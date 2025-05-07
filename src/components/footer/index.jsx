@@ -2,12 +2,13 @@
 import { Facebook, Instagram, Youtube } from "lucide-react"
 import Logo from './../../assets/logo.png'
 import { Image } from "@nextui-org/image"
+import { Link } from "react-router-dom"
 
 const Footer = () => {
     return (
-        <div className="bg-black relative py-14 px-4 lg:px-10 text-white z-[9]">
+        <div className="bg-black relative py-8 lg:py-14 px-0 lg:px-10 text-white z-[9]">
             <footer className="text-white z-10 relative">
-                <div className="max-w-6xl mx-auto px-4  ">
+                <div className="max-w-6xl mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                         {/* Logo and Company Info */}
                         <div className="mb-8 md:mb-0">
@@ -64,8 +65,16 @@ const Footer = () => {
                     </div>
 
                     {/* Copyright */}
-                    <div className="mt-8 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
-                        © {new Date().getFullYear()} Your Company Name. All rights reserved.
+                    <div className="mt-8 pt-8 border-t border-gray-700 text-center text-sm text-gray-400 flex flex-col gap-2">
+                        <div className="flex gap-3 justify-center">
+                            <Link to='/return' className="text-xs md:text-base">Return Policy</Link>
+                            <Link to='/privacy' className="text-xs md:text-base">Privacy Policy</Link>
+                            <Link to='/terms' className="text-xs md:text-base">Terms and Condition</Link>
+                        </div>
+                        <p className="text-xs md:text-base">
+                            © {new Date().getFullYear()} Your Company Name. All rights reserved.
+                        </p>
+
                     </div>
                 </div>
             </footer>
